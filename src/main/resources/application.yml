@@ -1,0 +1,23 @@
+  spring:
+    application:
+      name: user-center
+  # DataSource Config
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:4336/yupi
+      username: root
+      password: wyw
+    session:
+      timeout: 86400
+  server:
+      port: 8088
+      servlet:
+        context-path: /api
+  mybatis-plus:
+    configuration:
+      mapUnderscoreToCamelCase: false
+    globalConfig:
+      dbConfig:
+        logicDeleteField: isDelete  #根据数据库中的isDelete字段判断是否逻辑删除
+        logicDeleteValue: 1         #值为1时是逻辑删除
+        logicNotDeleteValue: 0      #值为0时不是逻辑删除
