@@ -7,3 +7,6 @@
       password: wyw
     session:
       timeout: 86400
+
+server:
+  address:0.0.0.0
